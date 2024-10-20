@@ -358,7 +358,9 @@ nav ul li a:hover::after {
     transform: translateY(100px);
     animation: slideInUp 1s ease-out forwards;
 }
-
+#scene #text:hover {
+    cursor: default;
+}
 /* Slide-in animation */
 @keyframes slideInUp {
     0% {
@@ -512,4 +514,28 @@ nav ul li a:hover::after {
         font-size: 16px;
         padding: 8px 25px;
     }
+}
+
+#goToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* Hidden by default */
+    background-color: #053163; /* Darker blue when hovered */
+    color: #82b1ff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+#goToTopBtn i {
+    font-size: 20px;
+}
+
+#goToTopBtn:hover {
+    background-color: #82b1ff; /* Darker blue when hovered */
+    color: #053163; /* Darker blue when hovered */
 }
