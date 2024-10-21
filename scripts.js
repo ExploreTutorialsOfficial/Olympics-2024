@@ -45,7 +45,6 @@ window.addEventListener('scroll', function(){
 
     img1.style.top = value * 1.75+'px';
     img2.style.top = value * 0.5+'px';
-    img3.style.top = value * 0.25+'px';
 })
 
 
