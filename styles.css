@@ -34,9 +34,49 @@ header {
 }
 
 nav ul {
-    list-style: none;
+    display: flex; 
+    justify-content: center;
     padding: 0;
-    display: flex;
+    list-style: none;
+}
+
+@media (max-width: 768px) {
+    *{
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+    }
+    nav ul {
+        flex-direction: column; 
+        align-items: center; 
+        width: 100%; 
+    }
+
+    nav ul li {
+        margin: 10px 0; 
+        width: 100%;
+        text-align: center; 
+    }
+    .header-container {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .ring.blue{
+       border: transparent;
+    }
+    .ring.black{
+        border: transparent;
+     }
+     .ring.red{
+        border: transparent;
+     }
+     .ring.yellow{
+        border: transparent;
+     }
+     .ring.green{
+        border: transparent;
+     }
 }
 
 nav ul li {
@@ -56,7 +96,7 @@ nav ul li a::after {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -5px; /* Adjust spacing from text */
+    bottom: -5px; 
     height: 2px;
     width: 100%;
     background-color: #053163;
@@ -94,7 +134,7 @@ nav ul li a:hover::after {
     width: 150px;
     height: 40px;
     position: relative;
-    overflow: hidden; /* Ensure that the border animation doesn't overflow */
+    overflow: hidden; 
     cursor: pointer;
 }
 
@@ -113,12 +153,12 @@ nav ul li a:hover::after {
 }
 
 .introbtn:hover::before {
-    border-color: #ffffff; /* Color for the border on hover */
+    border-color: #ffffff; 
     transition: all 0.5s ease-in-out;
 }
 
 .introbtn a {
-    position: relative; /* Ensure the text remains on top of the button */
+    position: relative; 
     z-index: 2;
     color: #fff;
     text-decoration: none;
@@ -153,9 +193,9 @@ nav ul li a:hover::after {
 }
 
 .ring {
-    width: 90px; /* Larger rings */
+    width: 90px;
     height: 90px;
-    border: 8px solid; /* Thicker border for larger size */
+    border: 8px solid; 
     border-radius: 50%;
     position: absolute;
 }
@@ -170,28 +210,28 @@ nav ul li a:hover::after {
 .ring.black {
     border-color: #111111;
     top: 0;
-    left: 100px; /* Adjusted for larger size */
+    left: 100px;
     z-index: 3;
 }
 
 .ring.red {
     border-color: #FF4136;
     top: 0;
-    left: 200px; /* Adjusted for larger size */
+    left: 200px;
     z-index: 2;
 }
 
 .ring.yellow {
     border-color: #FFDC00;
-    top: 60px; /* Adjusted for larger size */
-    left: 50px; /* Adjusted for larger size */
+    top: 60px; 
+    left: 50px;
     z-index: 1;
 }
 
 .ring.green {
     border-color: #2ECC40;
-    top: 60px; /* Adjusted for larger size */
-    left: 150px; /* Adjusted for larger size */
+    top: 60px; 
+    left: 150px;
     z-index: 1;
 }
 
@@ -213,13 +253,12 @@ nav ul li a:hover::after {
     line-height: 1.6;
 }
 
-/* When the section is visible */
 .about-section.visible .rings-container, 
 .about-section.visible .about-text {
     opacity: 1;
     transform: translateX(0);
 }
-/* Style for athlete profile cards */
+
 .athlete-cards {
     display: flex;
     flex-wrap: wrap;
@@ -272,7 +311,6 @@ nav ul li a:hover::after {
     margin: 5px 0;
 }
 
-/* Animation keyframes */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -361,7 +399,7 @@ nav ul li a:hover::after {
 #scene #text:hover {
     cursor: default;
 }
-/* Slide-in animation */
+
 @keyframes slideInUp {
     0% {
         opacity: 0;
@@ -381,7 +419,7 @@ nav ul li a:hover::after {
     object-fit: cover;
     pointer-events: none;
 }
-/* Video Cards container */
+
 .video-cards {
     display: flex;
     flex-wrap: wrap;
@@ -390,14 +428,13 @@ nav ul li a:hover::after {
     padding: 20px;
 }
 
-/* Video Card Styles */
 .video-card {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     width: 400px;
-    transform: scale(1); /* Default size */
+    transform: scale(1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -423,12 +460,11 @@ nav ul li a:hover::after {
     color: #333;
 }
 
-/* Video Card Hover Animation */
 .video-card:hover {
-    transform: scale(1.1); /* Grow by 10% on hover */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); 
 }
-/* Score Table Styling */
+
 .score-table-container {
     max-width: 1000px;
     margin: 0 auto;
@@ -458,7 +494,7 @@ nav ul li a:hover::after {
     color: #333;
 }
 
-/* Hidden Rows Initially */
+
 .hidden-row {
     display: none;
     animation: fadeInDown 0.6s ease;
@@ -475,7 +511,6 @@ nav ul li a:hover::after {
     }
 }
 
-/* "See More" Button */
 .see-more-btn {
     background-color: #053163;
     border: 2px solid #82b1ff;
@@ -492,7 +527,6 @@ nav ul li a:hover::after {
     color: #053163;
 }
 
-/* Arrow Icon Styling */
 .see-more-btn .arrow {
     font-size: 16px;
     margin-left: 10px;
@@ -503,7 +537,6 @@ nav ul li a:hover::after {
     transform: rotate(180deg);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .score-table th, .score-table td {
         padding: 8px;
@@ -520,8 +553,8 @@ nav ul li a:hover::after {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    display: none; /* Hidden by default */
-    background-color: #053163; /* Darker blue when hovered */
+    display: none; 
+    background-color: #053163; 
     color: #82b1ff;
     border: none;
     padding: 10px 15px;
@@ -536,6 +569,6 @@ nav ul li a:hover::after {
 }
 
 #goToTopBtn:hover {
-    background-color: #82b1ff; /* Darker blue when hovered */
-    color: #053163; /* Darker blue when hovered */
+    background-color: #82b1ff;  
+    color: #053163; 
 }
